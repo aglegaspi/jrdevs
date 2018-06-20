@@ -1,41 +1,33 @@
-<h2>Student's Index Page</h2>
+<h2> Roster Of Registered Students </h2>
 
-<%= link_to 'Add A New Student to the Data Base', new_student_path %>
+<%= link_to 'Register a Student to the Event Data Base', new_student_path %>
 
 
 
-		<h3> Lists Of Students </h3>
+		<h3> Lists of Registered Students </h3>
 
 		   <% @students.each do |student| %>
 
-		   <div> 
-		      Name: <%= student.first_name%> <%= student.last_name%>
-		   </div>
-
-		   <div> 
-		    Linkedin : <%= student.linkedin %>
-		   </div>
-
-		   <div> 
-		     E-mail : <%= student.email %>
-		   </div>
-
-		   <div> 
-		     Portfolio : <%= student.portfolio %>
-		   </div>
+			   <div> 
+			      Name: <%= student.first_name%> <%= student.last_name%>
+			   </div>
 
 
-		  <div>
-				<%= link_to 'Full Stats', student_path(student), 'data-disable-with': "Hold, please..." %>
+			   <div> 
+			     E-mail : <%= student.email %>
+			   </div>
+
+		       <div>
+					<%= link_to 'Full Stats', student_path(student), 'data-disable-with': "Hold, please..." %>
+					
 				
-			
-				<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
-
-		    <%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
+					<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
 
 
-			</div>
+			        <%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
 
-			<br>
+			   </div>
+
+			                   <br>
 
 		   <% end %>
