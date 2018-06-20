@@ -17,6 +17,7 @@ class EventsController < ApplicationController
         #     flash[:error] = 'O NO! You missing something.'
         #     render :new
         # end
+        redirect_to events_path
     end
 
     def new
