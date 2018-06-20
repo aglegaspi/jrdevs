@@ -1,1 +1,33 @@
 <h2> Form page for Students</h2>
+
+<%= form_for  @student do |f| %>
+		  <div>
+		 	 <%= f.label :first_name %>
+		 	 <%= f.text_field :first_name %>
+		  </div>
+
+		  <div>
+		 	 <%= f.label :last_name %>
+		 	 <%= f.text_field :last_name %>
+		  </div>
+
+		  <div>
+		 	 <%= f.label :linkedin %>
+		 	 <%= f.text_field :linkedin %>
+		 </div>
+
+		 <div>
+		 	 <%= f.label :email %>
+		 	 <%= f.text_field :email %>
+		 </div>
+
+		  <div>
+		 	 <%= f.label :portfolio %>
+		 	 <%= f.text_field :portfolio %>
+		 </div>		
+
+		 <div>
+		  	<%= f.submit %>
+		 </div>
+
+<% end %>

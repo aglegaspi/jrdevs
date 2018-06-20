@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_20_182933) do
+
+ActiveRecord::Schema.define(version: 2018_06_20_193519) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,15 +26,13 @@ ActiveRecord::Schema.define(version: 2018_06_20_182933) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "guests", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "company"
-    t.string "company_website"
-    t.string "email"
-    t.string "linkedin"
+  create_table "events_students", force: :cascade do |t|
+    t.bigint "students_id"
+    t.bigint "events_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["events_id"], name: "index_events_students_on_events_id"
+    t.index ["students_id"], name: "index_events_students_on_students_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -46,4 +45,7 @@ ActiveRecord::Schema.define(version: 2018_06_20_182933) do
     t.datetime "updated_at", null: false
   end
 
+
+  add_foreign_key "events_students", "events", column: "events_id"
+  add_foreign_key "events_students", "students", column: "students_id"
 end

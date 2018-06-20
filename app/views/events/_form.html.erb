@@ -1,0 +1,33 @@
+<%= form_for @event do |f| %>
+
+    <div>
+        <%= f.label :title, 'Title' %>
+        <%= f.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div>
+        <%= f.label :date, 'Date' %>
+        <%= f.date_field :date, class: 'form-control' %>
+    </div>    
+
+    
+    <div>
+        <%= f.label :start_time, 'Start Time' %>
+        <%= f.time_field :start_time, class: 'form-control' %>
+    </div>
+
+    <div>   
+        <%= f.label :end_time, 'End Time' %>
+        <%= f.time_field :end_time, class: 'form-control' %>
+    </div>
+
+    <div>   
+        <%= f.label :description, 'Description' %>
+        <%= f.text_area :description, class: 'form-control' %>
+    </div>
+        <br>
+    <div>   
+        <%= f.submit 'Submit', class: 'btn btn-light' %>
+    </div>
+
+<% end %>

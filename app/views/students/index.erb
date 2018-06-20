@@ -1,1 +1,41 @@
 <h2>Student's Index Page</h2>
+
+<%= link_to 'Add A New Student to the Data Base', new_student_path %>
+
+
+
+		<h3> Lists Of Students </h3>
+
+		   <% @students.each do |student| %>
+
+		   <div> 
+		      Name: <%= student.first_name%> <%= student.last_name%>
+		   </div>
+
+		   <div> 
+		    Linkedin : <%= student.linkedin %>
+		   </div>
+
+		   <div> 
+		     E-mail : <%= student.email %>
+		   </div>
+
+		   <div> 
+		     Portfolio : <%= student.portfolio %>
+		   </div>
+
+
+		  <div>
+				<%= link_to 'Full Stats', student_path(student), 'data-disable-with': "Hold, please..." %>
+				
+			
+				<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
+
+		    <%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+			</div>
+
+			<br>
+
+		   <% end %>
