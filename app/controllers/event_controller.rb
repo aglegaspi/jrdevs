@@ -24,8 +24,8 @@ class EventController < ApplicationController
 
     end
 
-    def destory
-        
+    def destroy
+
     end
 
 end
