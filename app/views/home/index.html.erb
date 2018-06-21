@@ -5,9 +5,9 @@
     </div>
 
     <div class="col-8 current_event bg-img">
-      <h2> <%= @first_event.date.strftime("%B %d, %Y") %></h2>
-      <h1> <%= @first_event.start_time.strftime("%I:%M%p") %><h1>
-      <h2> <%= @first_event.title %></h2>
+      <div class="date_size"> <%= @first_event.date.strftime("%B %d, %Y") %></div>
+      <div class="time_large centered"> <%= @first_event.start_time.strftime("%I:%M%p") %></div>
+      <div class="title_size centered"> <%= @first_event.title %></div>
    
 
     </div>
