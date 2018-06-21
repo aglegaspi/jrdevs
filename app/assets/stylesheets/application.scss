@@ -15,11 +15,18 @@
  *= require_self
  */
 
- * {
+ body {
      font-family: Arial, Helvetica, sans-serif;
+     background: url(image_path('wallpaper.jpg'));
+     background-size: cover;
+     background-repeat: no-repeat;
  }
 
  .logo {
     font-family: 'Comfortaa', sans-serif;
     font-size: 10vw;
+ }
+
+ .bg-nav {
+    background-color: #0066ff;
  }
