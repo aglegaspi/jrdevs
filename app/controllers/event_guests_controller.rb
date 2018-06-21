@@ -1,0 +1,2 @@
+class EventGuestsController < ApplicationController
+end
