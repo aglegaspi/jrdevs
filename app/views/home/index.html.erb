@@ -1,1 +1,20 @@
-<h2> welcome </h2>
+<div class="row justify-content-md-center">
+
+    <div class="col-2">
+      
+    </div>
+
+    <div class="col-8 current_event bg-img">
+      <h2> <%= @first_event.date.strftime("%B %d, %Y") %></h2>
+      <h1> <%= @first_event.start_time.strftime("%I:%M%p") %><h1>
+      <h2> <%= @first_event.title %></h2>
+   
+
+    </div>
+
+    <div class="col-2">
+     
+    </div>
+
+</div>
+
