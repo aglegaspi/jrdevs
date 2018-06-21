@@ -22,11 +22,32 @@ class GuestsController < ApplicationController
         end
 
   end
- private
-  def guest_params
-		params.require(:guest).permit(:first_name, :last_name, :company,
-                                  :company_website, :email, :linkedin)
-	end
+
+  def show
+
+      @guest_show = Guest.find(params[:id])
+
+  end
+  def edit
+
+      @guest = Guest.find(params[:id])
+
+  end
+
+  def update
+           guest = Guest.find(params[:id])
+           guest.update(guest_params)
+
+           redirect_to guests_path
+
+      end
+
+
+  private
+    def guest_params
+  		params.require(:guest).permit(:first_name, :last_name, :company,
+                                    :company_website, :email, :linkedin)
+  	end
 
 
 

@@ -1,3 +1,57 @@
-<h3>Edit Todo Page</h3>
 
-<%= render 'form' %>
+
+
+<center>
+  <h2>Guest Editorial Page </h2>
+	<%= form_for @guest do |f| %>
+
+	<div class="form-group row">
+		<%= f.label :first_name, class:"col-sm-3 col-form-label col-form-label-sm"  %>
+	  <div class="col-sm-6">
+		     <%= f.text_field :first_name, class:"form-control form-control-sm" %>
+    </div>
+ </div>
+
+ <div class="form-group row">
+	 <%= f.label :last_name, class:"col-sm-3 col-form-label col-form-label-sm"  %>
+	 <div class="col-sm-6">
+				<%= f.text_field :last_name, class:"form-control form-control-sm" %>
+		</div>
+ </div>
+ <div class="form-group row">
+	<%= f.label :email, class:"col-sm-3 col-form-label col-form-label-sm"  %>
+	<div class="col-sm-6">
+			 <%= f.text_field :email, class:"form-control form-control-sm" %>
+	 </div>
+ </div>
+
+ <div class="form-group row">
+	<%= f.label :company, class:"col-sm-3 col-form-label col-form-label-sm"  %>
+	<div class="col-sm-6">
+			 <%= f.text_field :company, class:"form-control form-control-sm" %>
+	 </div>
+ </div>
+
+
+  <div class="form-group row">
+ 	<%= f.label :company_website, class:"col-sm-3 col-form-label col-form-label-sm"  %>
+ 	<div class="col-sm-6">
+ 			 <%= f.text_field :company_website, class:"form-control form-control-sm" %>
+ 	 </div>
+  </div>
+	<div class="form-group row">
+	<%= f.label :linkedin, class:"col-sm-3 col-form-label col-form-label-sm"  %>
+	<div class="col-sm-6">
+			 <%= f.text_field :linkedin, class:"form-control form-control-sm" %>
+	 </div>
+	</div>
+ <div class="col-auto">
+	 		<%= f.submit %>
+ </div>
+
+
+
+
+
+
+<% end %>
