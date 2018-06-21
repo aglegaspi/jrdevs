@@ -13,11 +13,11 @@
       
       </div>
 
-        <div class="col-8 current_event bg-img">
+        <div class="col-8 ">
 
 		   <% @students.each_with_index do |student, counter| %>
              
-                     <%  if counter % 3 == 1 %>           
+                     <%  if counter % 4 == 1 %>           
 
              <div class="student_short_bio    student_short_bio_one">
 				   <div> 
@@ -38,9 +38,7 @@
 				   </div>
               </div>
 			                
-
-
-                       <%  elsif counter % 3 == 2 %>  
+                       <%  elsif counter % 4 == 2 %>  
 
 			       <div class="student_short_bio  student_short_bio_two">
 				   <div> 
@@ -61,9 +59,31 @@
 				   </div>
               </div>
 
-                       <%  elsif counter % 3 == 0 %> 
+                       <%  elsif counter % 4 == 3 %> 
 
                          <div class="student_short_bio  student_short_bio_three">
+								   <div> 
+								      Name: <%= student.first_name%> <%= student.last_name%>
+								   </div>
+								   <div> 
+								     E-mail : <%= student.email %>
+								   </div>
+							       <div>
+										<%= link_to 'More Info', student_path(student), 'data-disable-with': "Hold, please..." %>
+										
+									
+										<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
+
+
+								        <%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+								   </div>
+                         </div>
+
+
+                         <%  elsif counter % 4 == 0 %> 
+
+                         <div class="student_short_bio student_short_bio_four">
 								   <div> 
 								      Name: <%= student.first_name%> <%= student.last_name%>
 								   </div>

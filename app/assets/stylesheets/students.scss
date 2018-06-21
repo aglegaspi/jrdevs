@@ -1,3 +1,39 @@
 // Place all the styles related to the students controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.student_short_bio {
+	height: 6rem;
+	padding: 1rem 2rem 2rem 4rem;
+	color: white;
+	margin: 0rem 5rem .5rem 5rem;
+}
+
+.student_short_bio a{
+	color:black;
+	border: 1px solid black;
+	padding: 1.5px;
+	border-top-right-radius: 10px;
+}
+
+.student_short_bio a:hover{
+	color:#efc23e;	
+}
+
+ .student_short_bio_one {
+    background: #ad1119;
+ }
+
+  .student_short_bio_two {
+    background: #9b060d;
+ }
+
+ .student_short_bio_three {
+    background: #ea3c45;
+
+ }
+
+ .student_short_bio_four{
+   background: #ea0712;
+ }
