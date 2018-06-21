@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,9 +14,56 @@
 <body>
   <%= custom_bootstrap_flash %>
    
-    <div class="logo">jrdevs</div>
+    <div class="logo">jrdevs.</div>
 
     <%= yield %>
     
+    <!-- Nav Bar Begins -->  
+      <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+          <!-- Brand -->
+          <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+
+
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="nav-content">   
+          <ul class="navbar-nav">
+          <li class="nav-item">
+
+            <%= link_to 'All Upcoming Events', events_path, class: 'nav-link' %>
+
+          </li>
+          <li class="nav-item">
+
+            <%= link_to 'Student Profiles', students_path, class: 'nav-link' %>
+
+          </li>
+
+          <li class="nav-item">
+
+            <%= link_to 'Guests', guests_path, class: 'nav-link' %>
+
+          </li>
+
+          <li class="nav-item">
+
+            <%= link_to 'About', root_path, class: 'nav-link' %>
+
+          </li>
+          </ul>
+
+      </nav>
+    <!-- NAV BAR ENDS -->
+
+
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>
