@@ -1,1 +1,25 @@
-<h2> Student's Show Page</h2>
+
+<h2> <u> Student Profile </u></h2>
+
+
+
+ <h3>
+  <div> 
+  	<b> 
+  		<%= @student.first_name %>  <%= @student.last_name %> 
+    </b>
+  </div>
+  </h3>
+
+
+
+<div> E-mail: <%= @student.email %> </div>
+
+<div> Linkedin: <%= @student.linkedin %> </div>
+
+<div> Portfolio: <%= @student.portfolio %> </div>
+
+<br>
+
+
+<%= link_to 'Back To Student Profiles', students_path %> 
