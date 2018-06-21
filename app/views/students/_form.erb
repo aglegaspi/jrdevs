@@ -1,4 +1,4 @@
-<h2> Form page for Students</h2>
+
 
 <%= form_for  @student do |f| %>
 		  <div>
@@ -12,22 +12,23 @@
 		  </div>
 
 		  <div>
-		 	 <%= f.label :linkedin %>
-		 	 <%= f.text_field :linkedin %>
-		 </div>
-
-		 <div>
 		 	 <%= f.label :email %>
 		 	 <%= f.text_field :email %>
-		 </div>
+		  </div>
+
+		  <div>
+		 	 <%= f.label :linkedin %>
+		 	 <%= f.text_field :linkedin %>
+		  </div>
 
 		  <div>
 		 	 <%= f.label :portfolio %>
 		 	 <%= f.text_field :portfolio %>
-		 </div>		
+		  </div>
+		     <br>
 
-		 <div>
-		  	<%= f.submit %>
-		 </div>
+		  <div>
+		  	 <%= f.submit %>
+		  </div>
 
 <% end %>
