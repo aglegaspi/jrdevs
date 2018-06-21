@@ -5,5 +5,7 @@ Rails.application.routes.draw do
       resources :event_guests
 			resources :guests
 			resources :events
-			resources :students
+			resources :students do
+				resources :events_students, only: [:new, :create]
+			end
 end
