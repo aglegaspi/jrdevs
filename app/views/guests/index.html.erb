@@ -3,35 +3,25 @@
 <h4>
 	<%= link_to 'Create New Guest', new_guest_path  %>
 </h4>
-
+<div class="container">
 <div class="mb-4">
 	<% @guests.each do |guest| %>
-		<div class="mb-4 ">
-			<div id="name-div">
-				First Name <%= guest.first_name %>
-			</div>
-			<div>
-				Last Name <%= guest.last_name %>
-			</div>
-      <div>
-      			Company <%= guest.company %>
-      </div>
-      <div>
-        Company Web Site <%= guest.company_website %>
-      </div>
-      <div>
-        Email <%= guest.email %>
-      </div>
-      <div>
-        Linkedin <%= guest.linkedin %>
-      </div>
+			<div  class="panel panel-default">
 
-			<div>
-				<%= link_to 'View', guest_path(guest) %>
-				<%= link_to 'Edit', edit_guest_path(guest) %>
-				<%#= link_to 'Delete', todo, class: 'delete-todo' %>
-				<%= link_to 'Delete', guest, method: :delete, remote: true, class: 'delete-guest' %>
+					 <div class="panel-body mb-2">First Name: <%= guest.first_name %></div>
+					 <div class="panel-body mb-2">Last Name: <%= guest.last_name %> </div>
+					 <div class="panel-body mb-2 ">Website:  <%= guest.company %></div>
+					 <div class="panel-body mb-2">Email: <%= guest.company_website %></div>
+					 <div class="panel-body mb-2">Linkedin: <%= guest.email %></div>
+					 <div class="panel-body mb-2">Linkedin: <%= guest.linkedin %></div>
+					 <%= link_to 'View', guest_path(guest), class: "btn" %>
+					 <%= link_to 'Edit', edit_guest_path(guest), class: "btn" %>
+					 <%= link_to 'Delete', guest, method: :delete, remote: true, class: "delete-guest btn" %>
+
 			</div>
-		</div>
+			<div class="panel-body mb-4">
+			</div>
+
 	<% end %>
+</div>
 </div>
