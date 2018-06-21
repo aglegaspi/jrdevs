@@ -1,10 +1,11 @@
 
-<h2> Student's Detailed Information </h2>
+<h2> <u> Student Profile </u></h2>
 
 
-<div> First Name: <%= @student.first_name %> </div>
 
-<div> Last Name: <%= @student.last_name %> </div>
+ <h3> <div> <b> <%= @student.first_name %> <%= @student.last_name %>  </b></div> </h3>
+
+
 
 <div> E-mail: <%= @student.email %> </div>
 
@@ -12,3 +13,7 @@
 
 <div> Portfolio: <%= @student.portfolio %> </div>
 
+<br>
+
+
+<%= link_to 'Back To Registry', students_path %> 

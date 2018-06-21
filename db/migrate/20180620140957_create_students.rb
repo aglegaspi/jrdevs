@@ -6,7 +6,6 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.string :linkedin
       t.string :email
       t.string :portfolio
-
       t.timestamps
     end
   end

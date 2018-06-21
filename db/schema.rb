@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(version: 2018_06_20_193519) do
     t.index ["students_id"], name: "index_events_students_on_students_id"
   end
 
+  create_table "guests", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "company"
+    t.string "company_website"
+    t.string "email"
+    t.string "linkedin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "students", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
