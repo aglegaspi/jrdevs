@@ -9,16 +9,18 @@
  
 
 
-<div class="row justify-content-center ">
-	<div class="col-8">
-		<h3>  <b> Roster </b></h3>
-	</div>
-</div>
+
 		
 
 
-  <div class="row justify-content-md-center  pre-scrollable">
-        <div class="col-8 ">
+  <div class="row justify-content-md-center">
+
+  	<div class="row justify-content-center">
+	<div class="col-4 roster_title">
+		<h3>  <b> <p>R</p> </b></h3>
+	</div>
+</div>
+        <div class="col-8 pre-scrollable ">
 
 		       <% @students.each_with_index do |student, counter| %>
                     <%  if counter % 4 == 1 %>           
@@ -114,8 +116,10 @@
 		        <% end %>
 
          </div>
-    </div>
 
+
+    </div>
+    
 
 
 

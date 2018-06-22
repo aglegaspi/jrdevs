@@ -2,14 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.roster_title{
+	
+
+}
+
+
 .student_short_bio {
 	height: 8rem;
 	color: white;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow:fade;
 }
 
 .student_short_bio a{
 	color:black;
-	
 	padding: 1.5px;
 	border-top-right-radius: 10px;
 }
@@ -33,4 +42,7 @@
 
  .student_short_bio_four{
    background: rgb(39, 108, 219);
+ }
+ .space{
+    height:100px;
  }
