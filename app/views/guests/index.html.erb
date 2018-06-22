@@ -14,10 +14,12 @@
 					 <div class="panel-body mb-2">Email: <%= guest.company_website %></div>
 					 <div class="panel-body mb-2">Linkedin: <%= guest.email %></div>
 					 <div class="panel-body mb-2">Linkedin: <%= guest.linkedin %></div>
+
+			<% if admin_signed_in? %>
 					 <%= link_to 'View', guest_path(guest), class: "btn" %>
 					 <%= link_to 'Edit', edit_guest_path(guest), class: "btn" %>
 					 <%= link_to 'Delete', guest, method: :delete, remote: true, class: "delete-guest btn" %>
-
+       <% end %>
 			</div>
 			<div class="panel-body mb-4">
 			</div>

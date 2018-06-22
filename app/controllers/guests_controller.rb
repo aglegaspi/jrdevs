@@ -1,7 +1,14 @@
 class GuestsController < ApplicationController
 
   def index
-      @guests = Guest.all;
+      @guests = Guest.all
+      @admins = Admin.all
+      if admin_signed_in?
+        p ' user sign in yes'
+      elsif
+         p 'user sign out'
+      end
+
   end
 
   def new
@@ -25,7 +32,7 @@ def create
   def show
       @guest_show = Guest.find(params[:id])
   end
-  
+
   def edit
       @guest = Guest.find(params[:id])
   end
@@ -46,5 +53,5 @@ end
   		params.require(:guest).permit(:first_name, :last_name, :company, :company_website, :email, :linkedin)
   	end
 
-  
+
 end
