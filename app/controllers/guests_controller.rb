@@ -14,10 +14,7 @@ class GuestsController < ApplicationController
 
   def create
     		@guest = Guest.create(guest_params)
-        p  'guest id:  '
-        p   @guest.id
-        p  ' Event Id is:  '
-        p  params[:event_id]
+ 
         eventguest = EventGuest.create(event_id: params[:event_id],guest_id: @guest.id )
         if @guest.valid?
               flash[:success] = 'Your guest has been successfully created'
