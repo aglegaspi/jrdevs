@@ -1,117 +1,124 @@
 <h2> <u> Student Profiles </u> </h2>
 
-
-<i> <%= link_to 'Create A Student Profiles', new_student_path %> </i>  
-
+<i> <%= link_to 'Create A Student Profiles', new_student_path %> </i> 
 
 		<h3>  <b> Roster </b></h3>
 
 
   <div class="row justify-content-md-center">
-
-    <div class="col-2">
-      
-      </div>
-
         <div class="col-8 ">
 
-		   <% @students.each_with_index do |student, counter| %>
-             
-                     <%  if counter % 4 == 1 %>           
+		       <% @students.each_with_index do |student, counter| %>
+                    <%  if counter % 4 == 1 %>           
 
-             <div class="student_short_bio    student_short_bio_one">
-				   <div> 
-				      Name: <%= student.first_name%> <%= student.last_name%>
-				   </div>
-				   <div> 
-				     E-mail : <%= student.email %>
-				   </div>
-			       <div>
-						<%= link_to 'More Info', student_path(student), 'data-disable-with': "Hold, please..." %>
-						
-					
-						<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
+			            <div class="row student_short_bio student_short_bio_one m-2 ">
+							 <div class="col-12"> 
+							     Name: <%= student.first_name%> <%= student.last_name%>
+							</div>
+							<div class="col-12"> 
+							     E-mail : <%= student.email %>
+							</div>
 
-
-				        <%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
-
-				   </div>
-              </div>
+							<div class="d-flex flex-row-reverse">
+						 
+						    		
+						    	
+						    	
+						    		
+						    </div>
+							
+			            </div>
 			                
-                       <%  elsif counter % 4 == 2 %>  
+                    <%  elsif counter % 4 == 2 %>  
 
-			       <div class="student_short_bio  student_short_bio_two">
-				   <div> 
-				      Name: <%= student.first_name%> <%= student.last_name%>
-				   </div>
-				   <div> 
-				     E-mail : <%= student.email %>
-				   </div>
-			       <div>
-						<%= link_to 'More Info', student_path(student), 'data-disable-with': "Hold, please..." %>
-						
-					
-						<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
+			            <div class="row student_short_bio  student_short_bio_two m-2">
+							<div class="col-12"> 
+							     Name: <%= student.first_name%> <%= student.last_name%>
+							</div>
+							<div class="col-12"> 
+							     E-mail : <%= student.email %>
+							</div>
+							<div class="d-flex flex-row-reverse">
+								    <div class="col-md-4 " >
+						    			<%= link_to 'More Info', student_path(student), 'data-disable-with': "Hold, please..." %>
+						    		</div>
+						    	
+						    	
+						    		<div class="col-md-4 " >
+						    			<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>	
+						    		</div>
+						    	
+						    	
+						    		<div class="col--4 " >
+						    			<%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
+						    		</div>
+								
+						    </div>
+							
+							
+                        </div>
 
+                    <%  elsif counter % 4 == 3 %> 
 
-				        <%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
-
-				   </div>
-              </div>
-
-                       <%  elsif counter % 4 == 3 %> 
-
-                         <div class="student_short_bio  student_short_bio_three">
-								   <div> 
-								      Name: <%= student.first_name%> <%= student.last_name%>
-								   </div>
-								   <div> 
-								     E-mail : <%= student.email %>
-								   </div>
-							       <div>
-										<%= link_to 'More Info', student_path(student), 'data-disable-with': "Hold, please..." %>
-										
-									
-										<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
-
-
-								        <%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
-
-								   </div>
+                         <div class="row student_short_bio  student_short_bio_three m-2">
+							<div class="col-12"> 
+								  Name: <%= student.first_name%> <%= student.last_name%>
+							</div>
+							<div class="col-12"> 
+							     E-mail : <%= student.email %>
+							</div>
+							<div class="d-flex flex-row-reverse">
+						            <div class="col-md-4 " >
+						    			<%= link_to 'More Info', student_path(student), 'data-disable-with': "Hold, please..." %>
+						    		</div>
+						    	
+						    	
+						    		<div class="col-md-4 " >
+						    			<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>	
+						    		</div>
+						    	
+						    	
+						    		<div class="col--4 " >
+						    			<%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
+						    		</div>
+						    		
+						    </div>
+							
                          </div>
 
 
-                         <%  elsif counter % 4 == 0 %> 
+                    <%  elsif counter % 4 == 0 %> 
 
-                         <div class="student_short_bio student_short_bio_four">
-								   <div> 
-								      Name: <%= student.first_name%> <%= student.last_name%>
-								   </div>
-								   <div> 
-								     E-mail : <%= student.email %>
-								   </div>
-							       <div>
-										<%= link_to 'More Info', student_path(student), 'data-disable-with': "Hold, please..." %>
-										
-									
-										<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>
-
-
-								        <%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
-
-								   </div>
+                         <div class="row student_short_bio student_short_bio_four m-2">
+							<div class="col-12"> 
+								  Name: <%= student.first_name%> <%= student.last_name%>
+							</div>
+							<div class="col-12"> 
+							     E-mail : <%= student.email %>
+							</div>
+							<div class="d-flex flex-row-reverse">
+						    
+						    		<div class="col-md-4 " >
+						    			<%= link_to 'More Info', student_path(student), 'data-disable-with': "Hold, please..." %>
+						    		</div>
+						    	
+						    	
+						    		<div class="col-md-4 " >
+						    			<%= link_to 'Edit', edit_student_path(student), 'data-disable-with': "Transferring now..." %>	
+						    		</div>
+						    	
+						    	
+						    		<div class="col--4 " >
+						    			<%= link_to 'Remove', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
+						    		</div>
+						    </div>
+							
                          </div>
                   <% end %>
-
-		   <% end %>
+		        <% end %>
 
          </div>
-
-        <div class="col-2">
-     
     </div>
-
-</div>
 
 
 
