@@ -2,17 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .student_short_bio {
-	height: 6rem;
-	padding: 1rem 2rem 2rem 4rem;
+	height: 8rem;
 	color: white;
-	margin: 0rem 5rem .5rem 5rem;
 }
 
 .student_short_bio a{
 	color:black;
-	border: 1px solid black;
+	
 	padding: 1.5px;
 	border-top-right-radius: 10px;
 }
@@ -22,18 +19,18 @@
 }
 
  .student_short_bio_one {
-    background: #ad1119;
+    background:rgb(84, 57, 199);
  }
 
   .student_short_bio_two {
-    background: #9b060d;
+    background: rgb(200, 73, 188);
  }
 
  .student_short_bio_three {
-    background: #ea3c45;
+    background: rgb(87, 182, 88);
 
  }
 
  .student_short_bio_four{
-   background: #ea0712;
+   background: rgb(39, 108, 219);
  }

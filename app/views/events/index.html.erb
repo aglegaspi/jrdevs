@@ -16,14 +16,53 @@
     </tr>
   </thead>
   <tbody>
-  <% @events.each do |event| %>
-    <tr class="main-student">
+  <% @events.each_with_index do |event, counter| %>
+       <%  if counter % 4 == 1 %> 
+
+
+
+    <tr class="main-student student_short_bio_one">
       <td><%= event.title %></td>
       <td><%= event.date.strftime("%B %d, %Y") %></td>
       <td><%= event.start_time.strftime("%I:%M%p") %></td>
       <td><%= event.end_time.strftime("%I:%M%p") %></td>
       <td><%= event.description %></td>
      </tr>
+
+   <%  elsif counter % 4 == 2 %> 
+
+      <tr class="main-student student_short_bio_two">
+      <td><%= event.title %></td>
+      <td><%= event.date.strftime("%B %d, %Y") %></td>
+      <td><%= event.start_time.strftime("%I:%M%p") %></td>
+      <td><%= event.end_time.strftime("%I:%M%p") %></td>
+      <td><%= event.description %></td>
+     </tr>
+
+
+   <%  elsif counter % 4 == 3 %> 
+
+       <tr class="main-student student_short_bio_three">
+      <td><%= event.title %></td>
+      <td><%= event.date.strftime("%B %d, %Y") %></td>
+      <td><%= event.start_time.strftime("%I:%M%p") %></td>
+      <td><%= event.end_time.strftime("%I:%M%p") %></td>
+      <td><%= event.description %></td>
+     </tr>
+
+
+   <%  elsif counter % 4 == 0 %>
+
+       <tr class="main-student student_short_bio_four">
+      <td><%= event.title %></td>
+      <td><%= event.date.strftime("%B %d, %Y") %></td>
+      <td><%= event.start_time.strftime("%I:%M%p") %></td>
+      <td><%= event.end_time.strftime("%I:%M%p") %></td>
+      <td><%= event.description %></td>
+     </tr> 
+
+
+     <% end %>
     <% end %>
   </tbody>
 </table>
