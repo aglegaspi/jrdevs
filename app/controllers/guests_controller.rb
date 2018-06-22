@@ -7,8 +7,6 @@ class GuestsController < ApplicationController
   def new
      	@guest = Guest.new
       @events = Event.all
-      p 'Event all value '
-      p @events
       @eventguests = EventGuest.all
   end
 
