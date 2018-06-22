@@ -43,6 +43,16 @@
           <li class="nav-item">
             <%= link_to 'About', root_path, class: 'nav-link' %>
           </li>
+          <% if current_admin %>
+            
+            <li class="nav-item">
+              <%= link_to 'Log Out', destroy_admin_session_path, method: 'DELETE', class: 'nav-link float-right' %>
+            </li>
+            <% else %>
+            <li class="nav-item">
+              <%= link_to 'Admin Login', admin_session_path, class: 'nav-link float-right' %>
+            </li>
+          <% end %>
           </ul>
 
       </nav>
