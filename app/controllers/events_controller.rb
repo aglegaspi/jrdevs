@@ -2,6 +2,7 @@ class EventsController < ApplicationController
 
     def index
         @events = Event.all
+        @guests = Guest.all;
     end
 
     def create
@@ -11,7 +12,7 @@ class EventsController < ApplicationController
         #     flash[:success] = 'Yay! The event has been added'
         #     redirect_to students_path
         # end
-    
+
 
         # if @event.invalid?
         #     flash[:error] = 'O NO! You missing something.'
@@ -27,7 +28,7 @@ class EventsController < ApplicationController
     def edit
         @event = Event.find(params[:id])
     end
-    
+
     def show
         @event = Event.find(params[:id])
     end
@@ -35,14 +36,14 @@ class EventsController < ApplicationController
     def update
         event = Event.find(params[:id])
         event.update(event_params)
-        
+
         redirect_to events_path
     end
 
     def destroy
         Event.destroy(params[:id])
         # we are responding with to the delete with jason
-        # render json: {status: 'success', message: 'Event was removed!'}  
+        # render json: {status: 'success', message: 'Event was removed!'}
     end
 
     private
