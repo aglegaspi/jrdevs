@@ -1,68 +1,76 @@
 <h1> Events Page </h1>
+<div class="row justify-content-md-center">
 
-<div>
-<%= link_to "Add Event", new_event_path, class: "btn" %>
+    <div class="col-2">
+      
+    </div>
+
+    <div class="col-8 current_event bg-img">
+ 
+
+
+        <%= link_to "Add Event", new_event_path, class: "btn" %>
+        
+
+
+          
+          <% @events.each_with_index do |event, counter| %>
+              <%  if counter % 4 == 1 %> 
+
+
+          <table>
+          <tbody>
+            <tr class="main-student student_short_bio_one">
+              <td>Title: <%= event.title %></td>
+              <td>Date: <%= event.date.strftime("%B %d, %Y") %></td>
+              <td>Start Time: <%= event.start_time.strftime("%I:%M%p") %></td>
+              <td>End Time: <%= event.end_time.strftime("%I:%M%p") %></td>
+              <td>Description: <%= event.description %></td>
+            </tr>
+
+          <%  elsif counter % 4 == 2 %> 
+
+              <tr class="main-student student_short_bio_two">
+              <td>Title: <%= event.title %></td>
+              <td>Date: <%= event.date.strftime("%B %d, %Y") %></td>
+              <td>Start Time: <%= event.start_time.strftime("%I:%M%p") %></td>
+              <td>End Time: <%= event.end_time.strftime("%I:%M%p") %></td>
+              <td>Description: <%= event.description %></td>
+            </tr>
+
+
+          <%  elsif counter % 4 == 3 %> 
+
+              <tr class="main-student student_short_bio_three">
+              <td>Title: <%= event.title %></td>
+              <td>Date: <%= event.date.strftime("%B %d, %Y") %></td>
+              <td>Start Time: <%= event.start_time.strftime("%I:%M%p") %></td>
+              <td>End Time: <%= event.end_time.strftime("%I:%M%p") %></td>
+              <td>Description: <%= event.description %></td>
+            </tr>
+
+
+          <%  elsif counter % 4 == 0 %>
+
+              <tr class="main-student student_short_bio_four">
+              <td>Title: <%= event.title %></td>
+              <td>Date: <%= event.date.strftime("%B %d, %Y") %></td>
+              <td>Start Time: <%= event.start_time.strftime("%I:%M%p") %></td>
+              <td>End Time: <%= event.end_time.strftime("%I:%M%p") %></td>
+              <td>Description: <%= event.description %></td>
+            </tr> 
+
+
+            <% end %>
+            <% end %>
+          </tbody>
+        </table>
+
+    </div>
+
+    <div class="col-2">
+     
+    </div>
+
 </div>
-
-
-<table class="table table-hover table-dark">
-  <thead>
-    <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Date</th>
-      <th scope="col">Start Time</th>
-      <th scope="col">End Time</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @events.each_with_index do |event, counter| %>
-       <%  if counter % 4 == 1 %> 
-
-
-
-    <tr class="main-student student_short_bio_one">
-      <td><%= event.title %></td>
-      <td><%= event.date.strftime("%B %d, %Y") %></td>
-      <td><%= event.start_time.strftime("%I:%M%p") %></td>
-      <td><%= event.end_time.strftime("%I:%M%p") %></td>
-      <td><%= event.description %></td>
-     </tr>
-
-   <%  elsif counter % 4 == 2 %> 
-
-      <tr class="main-student student_short_bio_two">
-      <td><%= event.title %></td>
-      <td><%= event.date.strftime("%B %d, %Y") %></td>
-      <td><%= event.start_time.strftime("%I:%M%p") %></td>
-      <td><%= event.end_time.strftime("%I:%M%p") %></td>
-      <td><%= event.description %></td>
-     </tr>
-
-
-   <%  elsif counter % 4 == 3 %> 
-
-       <tr class="main-student student_short_bio_three">
-      <td><%= event.title %></td>
-      <td><%= event.date.strftime("%B %d, %Y") %></td>
-      <td><%= event.start_time.strftime("%I:%M%p") %></td>
-      <td><%= event.end_time.strftime("%I:%M%p") %></td>
-      <td><%= event.description %></td>
-     </tr>
-
-
-   <%  elsif counter % 4 == 0 %>
-
-       <tr class="main-student student_short_bio_four">
-      <td><%= event.title %></td>
-      <td><%= event.date.strftime("%B %d, %Y") %></td>
-      <td><%= event.start_time.strftime("%I:%M%p") %></td>
-      <td><%= event.end_time.strftime("%I:%M%p") %></td>
-      <td><%= event.description %></td>
-     </tr> 
-
-
-     <% end %>
-    <% end %>
-  </tbody>
-</table>
+<div>
