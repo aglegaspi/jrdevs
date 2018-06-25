@@ -10,4 +10,8 @@ Rails.application.routes.draw do
 	resources :students do
 		resources :events_students, only: [:new, :create]
 	end
+
+	resources :events_students do 
+		 resources :students, only: [:destroy]
+	end
 end

@@ -3,29 +3,37 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .student_short_bio {
-    height: 10rem;
+    height: 12rem;
     color: white;
 }
 
 .headshot_big img{
-    height: 10rem;
-    border-radius: 20px;
+    height: 14rem;
+    border-radius: 10px;
+}
+
+
+.headshot_small{
+overflow:hidden;
+ 
 }
 
 .headshot_small img{
-    height: 3rem;
+
+ width:100%;
+
+ 
 }
 
 .thumb_nail{
-    background-image: url(hamilton.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
+   
 }
 
 .student_short_bio a{
     color:black;    
     padding: 1.5px;
     border-top-right-radius: 10px;
+
 }
 
 .student_short_bio a:hover{
