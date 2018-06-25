@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :admins
+	devise_for :admins, controllers: {
+		registrations: 'admins/registrations',
+		sessions: 'admins/sessions'
+	  }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	root :to => 'home#index'
 
-	# resources :event_guests
+	resources :event_guests, only: [:index,:destroy]
 
 	resources :events do
 		resources :guests, only: [:new,:create]
@@ -18,4 +21,7 @@ Rails.application.routes.draw do
 	resources :events_students do 
 		 resources :students, only: [:destroy]
 	end
+
+	resources :about, only: [:index]
+
 end
