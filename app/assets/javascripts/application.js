@@ -9,16 +9,19 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+//= require jquery/dist/jquery.min
+//= require bootstrap/dist/js/bootstrap.min
+//= require axios/dist/axios
 //= require toastr/build/toastr.min.js
 //= require rails-ujs
 //= require_tree .
 
 // Initialize tooltip component
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-  
-  // Initialize popover component
-  $(function () {
-    $('[data-toggle="popover"]').popover()
-  })
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+// Initialize popover component
+$(function() {
+  $('[data-toggle="popover"]').popover()
+})
