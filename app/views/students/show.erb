@@ -1,7 +1,4 @@
-
-
 <div class="row justify-content-md-center">
-
     <div class="col-2">
       <h1 class="page_title">student profile.</h1>
     </div>
@@ -9,34 +6,35 @@
     <div class="col-8">
         <div class="row"  align="center">
           <div class="col-12">
-                 <h3>
-      
-          <b> 
-            <%= @student.first_name %>  <%= @student.last_name %> 
-          </b>
-   
-        </h3>
-                    <br>
+            <h3>
+              <b> 
+                <%= @student.first_name %>  <%= @student.last_name %> 
+              </b>
+            </h3>
+                     <br>
 
-                   <% if @student.avatar.attached? %>
+          <% if @student.avatar.attached? %>
                         <div class="headshot_big">
                           <%= image_tag @student.avatar %>
                         </div>
-                   <% else %>
+              <% else %>
                        <div class="headshot_big">
                           <%= image_tag "hamilton.jpg" %>
                           <p>  * No Head Shot Given * </p>
                         </div>
-                  <% end %>
+           <% end %>         
 
                       <br>
-
 
                   <div> E-mail: <%= @student.email %> </div>
 
                   <div> Linkedin: <%= @student.linkedin %> </div>
 
                   <div> Portfolio: <%= @student.portfolio %> </div>
+
+                        <h4> upcoming events.</h4>
+
+             s
 
             
           </div>
@@ -69,8 +67,6 @@
     </div>
 
 </div>
-
-
 
 
 

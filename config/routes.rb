@@ -12,10 +12,11 @@ Rails.application.routes.draw do
 	resources :guests
 	
 	resources :students do
-		resources :events_students, only: [:new, :create]
+		resources :events_students, only: [:new, :show, :create]
 	end
 
 	resources :events_students do 
 		 resources :students, only: [:destroy]
 	end
 end
+
