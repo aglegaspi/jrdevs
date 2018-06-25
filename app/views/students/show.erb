@@ -1,4 +1,5 @@
 
+
 <h2> <u> Student Profile </u></h2>
 
 
@@ -11,6 +12,17 @@
   </div>
   </h3>
 
+  <% if @student.avatar.attached? %>
+		    <div class="headshot_big">
+		    	<%= image_tag @student.avatar %>
+		    </div>
+   <% else %>
+		   <div class="headshot_big">
+		    	<%= image_tag "hamilton.jpg" %>
+		    	<p>  * No Head Shot Given * </p>
+		    </div>
+  <% end %>
+                 <br>
 
 
 <div> E-mail: <%= @student.email %> </div>
@@ -19,7 +31,11 @@
 
 <div> Portfolio: <%= @student.portfolio %> </div>
 
-<br>
+                  <br>
+                   <%= link_to 'Remove', student_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_student_path, 'data-disable-with': "Transferring now..." %> 
+  <br>
+
 
 
 <%= link_to 'Back To Student Profiles', students_path %> 

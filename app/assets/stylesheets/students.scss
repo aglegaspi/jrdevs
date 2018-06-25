@@ -3,13 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .student_short_bio {
-	height: 8rem;
+	height: 10rem;
 	color: white;
 }
 
+.headshot_big img{
+	height: 10rem;
+	border-radius: 20px;
+}
+
+.headshot_small img{
+    height: 3rem;
+}
+.thumb_nail{
+	background-image: url(hamilton.jpg);
+	background-repeat: no-repeat;
+    background-size: contain;
+}
 .student_short_bio a{
-	color:black;
-	
+	color:black;	
 	padding: 1.5px;
 	border-top-right-radius: 10px;
 }
@@ -28,9 +40,21 @@
 
  .student_short_bio_three {
     background: rgb(87, 182, 88);
-
+ }
+.student_short_bio_four {
+    background: rgb(244, 104, 66);
  }
 
- .student_short_bio_four{
-   background: rgb(39, 108, 219);
- }
+// ________________________ Media Q's _____________________________
+
+@media only screen and (max-width: 660px) {
+    .student_email {
+        display:none;
+    }
+
+    .delete_button {
+        display:none;
+    }
+}
+
+
