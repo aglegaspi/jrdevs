@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 	resources :guests
 	
 	resources :students do
-		resources :events_students, only: [:new, :create]
+		resources :events_students, only: [:new, :show, :create]
 	end
 
 	resources :events_students do 
@@ -25,3 +25,4 @@ Rails.application.routes.draw do
 	resources :about, only: [:index]
 
 end
+

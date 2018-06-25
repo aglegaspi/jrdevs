@@ -6,19 +6,25 @@
 
 
 <div class="container">
-	<div class="col-8">
+	<!-- <div class="col-8">
 		 <p> <%= link_to "Add Guest", new_guest_path, class: "btn" %> </p>
+	</div> -->
+	<div class="row-12 empty_space">
 	</div>
 
   <% @guests.each do |guest| %>
 		  <div class="parent-tr">
  		<ul class="main-student student_short_bio_one table_format">
+			<% guest.events.each do |my_event| %>
+				<li class="title"> Event Name(s): <%= my_event.title %> </li>
+				<% end %>
   			<li class="title"> First Name: <%= guest.first_name %></li>
 	  		<li class="title"> Last Name: <%= guest.last_name %> </li>
 		  	<li class="title"> Company: <%= guest.company %> </li>
 			  <li class="title"> Comapany Website: <%= guest.company_website %> </li>
 			  <li class="title"> Email: <%= guest.email %> </li>
 			  <li class="title"> Linkedin: <%= guest.linkedin %> </li>
+
 			  <li class="view">
 			  <% if admin_signed_in? %>
 			    <%= link_to 'Delete', guest, method: :delete, remote: true, class:'delete-todo btn float-right' %>
