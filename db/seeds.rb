@@ -39,7 +39,7 @@ students = [{
 },
 
  {
-	first_name: 'Beyoncé', 
+	first_name: 'Beyoncé',
 	last_name:  'Knowles',
 	linkedin: 'linkedin.com/queen_b',
 	email: 'GetInFormation@gmail.com',
@@ -48,7 +48,7 @@ students = [{
 
 students.each do |s|
 	Student.create(s) unless Student.exists?(linkedin: s[:linkedin])
-end	
+end
 
 
 events = [{
@@ -57,7 +57,7 @@ events = [{
 	start_time: '16:00:00',
 	end_time:  '18:00:00',
 	description: 'Alumni present their Frontend and Backend skills.
-	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 }, {
 	title: 'Software Engineering Intensive Presentations',
@@ -65,7 +65,7 @@ events = [{
 	start_time: '16:00:00',
 	end_time: '18:00:00',
 	description: 'Alumni present their Frontend and Backend skills.
-	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 },  {
 	title: 'Software Engineering Intensive Presentations',
@@ -73,7 +73,7 @@ events = [{
 	start_time: '16:00:00',
 	end_time: '18:00:00',
 	description: 'Alumni present their Frontend and Backend skills.
-	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 },  {
 	title: 'Software Engineering Intensive Presentations',
@@ -81,7 +81,7 @@ events = [{
 	start_time: '16:00:00',
 	end_time: '18:00:00',
 	description: 'Alumni present their Frontend and Backend skills.
-	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 },  {
 	title: 'Software Engineering Intensive Presentations',
@@ -89,18 +89,67 @@ events = [{
 	start_time: '16:00:00',
 	end_time: '18:00:00',
 	description: 'Alumni present their Frontend and Backend skills.
-	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 },	{
-	title: 'Web Development Fellowship Presentations', 
+	title: 'Web Development Fellowship Presentations',
 	date:  '2018-09-26',
 	start_time: '16:00:00',
 	end_time: '18:00:00',
 	description: 'Alumni present their Frontend and Backend skills.
-	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 }]
 
 events.each do |s|
 	Event.create(s) unless Event.exists?(date: s[:date])
-end	
+end
+
+
+
+guests = [{
+	first_name: 'Timothy',
+	last_name:   'Donald Cook',
+	company: 'Apple',
+	company_website:  'https://www.apple.com/',
+	email: 'tcook@apple.com',
+	linkedin: 'https://www.linkedin.com/in/timothygcook/'
+},
+{
+ first_name: 'Badruduja',
+ last_name:   'Bhuiya',
+ company: 'NYCDA Student',
+ company_website:  'https://nycda.com/',
+ email: 'badru@gmail.com',
+ linkedin: 'https://www.linkedin.com/in/b-bhuiya/'
+},
+{
+ first_name: 'George ',
+ last_name:   'Dagher',
+ company: 'NYCDA',
+ company_website:  'https://nycda.com/',
+ email: 'george@nycda.com',
+ linkedin: 'https://www.linkedin.com/in/george-dagher-5b4a8811/'
+},
+{
+ first_name: 'Meg',
+ last_name:   'Whitman',
+ company: 'HP Enterprise',
+ company_website:  'www.hp.com',
+ email: 'whitman@hp.com',
+ linkedin: 'https://www.linkedin.com/in/megwhitman/'
+},
+{
+ first_name: 'Bill',
+ last_name:   'Gates',
+ company: 'Microsoft',
+ company_website:  'https://www.microsoft.com/en-us/',
+ email: 'billg@microsoft.com',
+ linkedin: 'https://www.linkedin.com/in/williamhgates/'
+}
+
+]
+
+guests.each do |s|
+	Guest.create(s) unless Guest.exists?(email: s[:email])
+end
