@@ -46,8 +46,61 @@ students = [{
 	portfolio: 'QueenB.com'
 }]
 
-
-
 students.each do |s|
 	Student.create(s) unless Student.exists?(linkedin: s[:linkedin])
+end	
+
+
+events = [{
+	title: 'Software Engineering Intensive Presentations',
+	date:   '2018-07-10',
+	start_time: '16:00:00',
+	end_time:  '18:00:00',
+	description: 'Alumni present their Frontend and Backend skills.
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
+}, {
+	title: 'Software Engineering Intensive Presentations',
+	date: '2018-10-31',
+	start_time: '16:00:00',
+	end_time: '18:00:00',
+	description: 'Alumni present their Frontend and Backend skills.
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
+},  {
+	title: 'Software Engineering Intensive Presentations',
+	date: '2019-01-30',
+	start_time: '16:00:00',
+	end_time: '18:00:00',
+	description: 'Alumni present their Frontend and Backend skills.
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
+},  {
+	title: 'Software Engineering Intensive Presentations',
+	date: '2019-02-27',
+	start_time: '16:00:00',
+	end_time: '18:00:00',
+	description: 'Alumni present their Frontend and Backend skills.
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
+},  {
+	title: 'Software Engineering Intensive Presentations',
+	date: '2018-10-04',
+	start_time: '16:00:00',
+	end_time: '18:00:00',
+	description: 'Alumni present their Frontend and Backend skills.
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
+},	{
+	title: 'Web Development Fellowship Presentations', 
+	date:  '2018-09-26',
+	start_time: '16:00:00',
+	end_time: '18:00:00',
+	description: 'Alumni present their Frontend and Backend skills.
+	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL, 
+	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
+}]
+
+events.each do |s|
+	Event.create(s) unless Event.exists?(date: s[:date])
 end	

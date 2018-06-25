@@ -18,8 +18,8 @@
  body {
      font-family: Arial, Helvetica, sans-serif;
      background: url(image_path('wallpaper.jpg'));
-     background-position: fixed;
      background-repeat: no-repeat;
+     background-attachment: fixed;
  }
 
 
@@ -31,3 +31,9 @@
  .bg-nav {
     background-color: #0066ff;
  }
+
+ .empty_space {
+    padding: 20px;
+    margin: 20px;
+    height: 100px;
+}

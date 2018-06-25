@@ -2,29 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.student_short_bio {
+    height: 12rem;
+    color: white;
+}
 
-.roster_title{
-	
-
+.headshot_big img{
+    height: 14rem;
+    border-radius: 10px;
 }
 
 
-.student_short_bio {
-	height: 8rem;
-	color: white;
-	overflow: hidden;
-    white-space: nowrap;
-    text-overflow:fade;
+.headshot_small{
+overflow:hidden;
+ 
+}
+
+.headshot_small img{
+
+ width:100%;
+
+ 
+}
+
+.thumb_nail{
+   
 }
 
 .student_short_bio a{
-	color:black;
-	padding: 1.5px;
-	border-top-right-radius: 10px;
+    color:black;    
+    padding: 1.5px;
+    border-top-right-radius: 10px;
+
 }
 
 .student_short_bio a:hover{
-	color:#efc23e;	
+    color:#efc23e;  
 }
 
  .student_short_bio_one {
@@ -37,12 +50,18 @@
 
  .student_short_bio_three {
     background: rgb(87, 182, 88);
-
  }
 
- .student_short_bio_four{
-   background: rgb(39, 108, 219);
+.student_short_bio_four {
+    background: rgb(244, 104, 66);
  }
- .space{
-    height:100px;
- }
+
+// ________________________ Media Q's _____________________________
+@media only screen and (max-width: 660px) {
+    .student_email {
+        display:none;
+    }
+    .delete_button {
+        display:none;
+    }
+}
