@@ -1,10 +1,39 @@
 <H1> Walking through Guest Page </H1>
 
-<h4>
+<!-- <h4>
 	<%= link_to 'Create New Guest', new_guest_path  %>
-</h4>
+</h4> -->
+
+
 <div class="container">
-<div class="mb-4">
+	<div class="col-8">
+		 <p> <%= link_to "Add Guest", new_guest_path, class: "btn" %> </p>
+	</div>
+
+  <% @guests.each do |guest| %>
+		  <div class="parent-tr">
+ 		<ul class="main-student student_short_bio_one table_format">
+  			<li class="title"> First Name: <%= guest.first_name %></li>
+	  		<li class="title"> Last Name: <%= guest.last_name %> </li>
+		  	<li class="title"> Company: <%= guest.company %> </li>
+			  <li class="title"> Comapany Website: <%= guest.company_website %> </li>
+			  <li class="title"> Email: <%= guest.email %> </li>
+			  <li class="title"> Linkedin: <%= guest.linkedin %> </li>
+			  <li class="view">
+			  <% if admin_signed_in? %>
+			    <%= link_to 'Delete', guest, method: :delete, remote: true, class:'delete-todo btn float-right' %>
+          <br>
+			  <% end %>
+		    </li>
+		  </ul>
+			</div>
+   <% end %>
+
+	<div class="row-12 empty_space">
+	</div>
+
+
+<!-- <div class="mb-4">
 	<% @guests.each do |guest| %>
 			<div  class="panel panel-default">
 
@@ -25,5 +54,5 @@
 			</div>
 
 	<% end %>
-</div>
+</div> -->
 </div>
