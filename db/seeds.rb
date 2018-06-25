@@ -36,9 +36,7 @@ students = [{
 	linkedin: 'linkedin.com/TChalla',
 	email: 'BlackPanther@vmail.com',
 	portfolio: 'WakandaForever.com'
-},
-
- {
+},	 {
 	first_name: 'Beyoncé',
 	last_name:  'Knowles',
 	linkedin: 'linkedin.com/queen_b',
@@ -52,7 +50,7 @@ end
 
 
 events = [{
-	title: 'Software Engineering Intensive Presentations',
+	title: 'Software Engineering Intensive Showcase',
 	date:   '2018-07-10',
 	start_time: '16:00:00',
 	end_time:  '18:00:00',
@@ -60,7 +58,7 @@ events = [{
 	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 }, {
-	title: 'Software Engineering Intensive Presentations',
+	title: 'Software Engineering Intensive Showcase',
 	date: '2018-10-31',
 	start_time: '16:00:00',
 	end_time: '18:00:00',
@@ -68,7 +66,7 @@ events = [{
 	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 },  {
-	title: 'Software Engineering Intensive Presentations',
+	title: 'Software Engineering Intensive Showcase',
 	date: '2019-01-30',
 	start_time: '16:00:00',
 	end_time: '18:00:00',
@@ -76,7 +74,7 @@ events = [{
 	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 },  {
-	title: 'Software Engineering Intensive Presentations',
+	title: 'Software Engineering Intensive Showcase',
 	date: '2019-02-27',
 	start_time: '16:00:00',
 	end_time: '18:00:00',
@@ -84,7 +82,7 @@ events = [{
 	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 },  {
-	title: 'Software Engineering Intensive Presentations',
+	title: 'Software Engineering Intensive Showcase',
 	date: '2018-10-04',
 	start_time: '16:00:00',
 	end_time: '18:00:00',
@@ -92,7 +90,7 @@ events = [{
 	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 },	{
-	title: 'Web Development Fellowship Presentations',
+	title: 'Web Development Fellowship Showcase', 
 	date:  '2018-09-26',
 	start_time: '16:00:00',
 	end_time: '18:00:00',
