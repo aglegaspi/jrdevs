@@ -2,6 +2,11 @@
 
 <%= render 'form' %>
 
-  <br>
+     <br>
+
+  <%= link_to 'Remove', student_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+     <br>
+
 
 <%= link_to 'Back To Student Profiles', students_path %> 
