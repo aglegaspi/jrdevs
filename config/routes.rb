@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	root :to => 'home#index'
 
-	resources :event_guests
-	resources :events
+	# resources :event_guests
+
+	resources :events do
+		resources :guests, only: [:new,:create]
+	end
+
 	resources :guests
 	
 	resources :students do

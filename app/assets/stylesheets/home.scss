@@ -2,9 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.bg-img {
-    // background-image: url(image_path('event_bg_img.png'));
-    height: 100%;
+// .bg-img {
+//     // background-image: url(image_path('event_bg_img.png'));
+//     height: 100%;
+// }
+
+.current_event {
+    background-color: #ff0461de;
+    padding: 20px;
+    color: white;
 }
 
 .time_large {

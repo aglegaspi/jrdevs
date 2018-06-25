@@ -3,21 +3,22 @@ class EventsController < ApplicationController
     def index
         @events = Event.all
         @guests = Guest.all;
+    
     end
 
     def create
         @event = Event.create(event_params)
 
-        # if @event.valid?
-        #     flash[:success] = 'Yay! The event has been added'
-        #     redirect_to students_path
-        # end
+        if @event.valid?
+            flash[:success] = 'Yas...The event has been added!'
+            redirect_to students_path
+        end
 
 
-        # if @event.invalid?
-        #     flash[:error] = 'O NO! You missing something.'
-        #     render :new
-        # end
+        if @event.invalid?
+            flash[:error] = 'Uh you missed something.'
+            render :new
+        end
         redirect_to events_path
     end
 

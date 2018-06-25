@@ -2,10 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.current_event {
-    background-color: #FFCB04;
-    padding: 20px;
-}
+
 
 .page_title {
     writing-mode: vertical-rl;
@@ -14,11 +11,6 @@
     color: adjust-hue($color: #ffe600, $degrees: -10)
   }
 
-.empty_space {
-    padding: 20px;
-    margin: 20px;
-    height: 100px;
-}
 
 .table_format {
     color: white;
@@ -62,3 +54,21 @@
     background: #fabb3c;
     text-decoration: none;
   }
+
+//   colors for tables
+
+.firstcolor {
+    background:#350aefe6;
+ }
+
+.secondcolor {
+    background: #ec14d8d4;
+ }
+
+ .thirdcolor {
+    background: #15d017e0;
+ }
+
+.fourthcolor {
+    background: #ff6401d9;
+ }
