@@ -4,6 +4,7 @@
 	<%= f.label :event_id, 'Select Event' %>
 	 <br>
 	<%= f.select :event_id, options_for_select(@events.map {|event| [event.title, event.id]}) %>
+	    <br>
 
 	<%= f.submit %>
 <% end %>

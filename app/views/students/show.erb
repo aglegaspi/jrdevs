@@ -35,10 +35,11 @@
                    <!--   This format is due to the route, to access the individual students events, you have to go through events_students -->
                       <% @student.events_students.each do |events_student| %>
                             <div class="row-12">
-                               <ul class=" table_format">
+                               <ul class="firstcolor table_format">
                                  <li class="title"><%= events_student.event.title %></li> 
+                                 <li class="date"><%= events_student.event.date.strftime("%B %-d, %Y") %></li>
+                                  <li class="view">  <%= link_to 'Remove', events_student_path(events_student), class: "btn float-right", method: :delete, data: { confirm: 'Are you sure?' } %></li>
                                </ul>
-                                <%= link_to 'Remove', events_student_path(events_student), class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %>
                              </div>
                        <% end %>                                  
           </div>

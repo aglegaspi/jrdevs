@@ -7,25 +7,20 @@
 
   	  <div class="row-12">
         <% if current_admin %>
-          <div class="col-12">
-          	
-          
-  	  	   <div class="row-6 my-4">
-  	  	   	   <%= link_to 'create profile', new_student_path, class: "btn" %> 
-  	  	   </div>
-  	  	   <div class="row-6 my-4">
-  	  	   	  
-  	  	   
-  	  	   </div>
+          <div class="col-12">     
+	  	  	   <div class="row-6 my-4">
+	  	  	   	   <%= link_to 'create profile', new_student_path, class: "btn" %> 
+	  	  	   </div>
+	  	  	   <div class="row-6 my-4">
+	  	  	   	  	  	   
+	  	  	   </div>
 
            </div>
    	  	  <% end %>
    	  </div>
    	  <div class="row-12 text-right">
   	  	   <u> # of students:</u>
-   	  	    	 <b class="total"> <i> <%= @students.all.count %></i></b> 
-   	  	    
-    	  
+   	  	    	 <b class="total"> <i> <%= @students.all.count %></i></b>     	  
    	  </div>
 
 		   <% @students.each_with_index do |student, counter| %>
@@ -34,8 +29,7 @@
 			        <div class="row tile student_one my-3">
 
 	                     <div class="col-md-4">
-							 <% if student.avatar.attached? %>						   	   
-							   	      	
+							 <% if student.avatar.attached? %>			   	      	
 								<%= image_tag student.avatar, class: "headshot_small  justify-content-center" %>
 														   	 			  
 							<% else %>
@@ -73,8 +67,7 @@
 							    <%= link_to student.first_name, student_path(student), 'data-disable-with': "Hold, please..." %>   	   
 							 </div>	
                     </div> 
-							
-			       
+							       
 
                     <%  elsif counter % 4 == 3 %> 
                         <div class="row tile student_three my-3">
@@ -98,8 +91,6 @@
 							 </div>	
                     </div>
 
-                       
-
                     <%  elsif counter % 4 == 0 %> 
 
                         <div class="row tile student_four my-3">
@@ -117,7 +108,6 @@
 							</div>
 
 					 		 <div class="col-md-8 text-xs-center text-sm-right text-lg-center" >
-
 					 				
 							    <%= link_to student.first_name, student_path(student), 'data-disable-with': "Hold, please..." %>   	   
 							 </div>	
