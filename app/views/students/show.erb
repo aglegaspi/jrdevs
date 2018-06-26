@@ -1,48 +1,47 @@
 <div class="row justify-content-md-center">
-    <div class="col-2">
-      <h1 class="page_title">student profile.</h1>
-    </div>
-
-    <div class="col-8">
-        <div class="row"  align="center">
+      <div class="col-md-2">
+        <h1 class="page_title"> profile.</h1>
+      </div>
+   <div class="col-md-6">
+        <div class="row" align="center">
           <div class="col-12">
             <h3>
               <b> 
-                <%= @student.first_name %>  <%= @student.last_name %> 
+               <u> <%= @student.first_name %>  <%= @student.last_name %> </u>
               </b>
             </h3>
                      <br>
 
           <% if @student.avatar.attached? %>
-                        <div class="headshot_big">
+                        <div class="row-6 my-3 headshot_big">
                           <%= image_tag @student.avatar %>
                         </div>
               <% else %>
-                       <div class="headshot_big">
+                       <div class="row-6 my-3  headshot_big">
                           <%= image_tag "hamilton.jpg" %>
                           <p>  * No Head Shot Given * </p>
                         </div>
-           <% end %>         
+          <% end %>         
 
-                      <br>
+                      <div class="row-6 my-3 bio_glow"> 
+                            E-mail: <%= @student.email %> 
+                            <br>
 
-                  <div> E-mail: <%= @student.email %> </div>
+               Linkedin: <%= @student.linkedin %> 
+               <br>
 
-                  <div> Linkedin: <%= @student.linkedin %> </div>
+                  Portfolio: <%= @student.portfolio %> 
+                      </div>
+                
+                 
 
-                  <div> Portfolio: <%= @student.portfolio %> </div>
-
-                        <h4> upcoming events.</h4>
-
-             s
+                  
 
             
           </div>
         </div>
 
-               <div class="row-12 empty_space">
-         
-               </div>
+          
 
 
 
@@ -50,21 +49,28 @@
       
     </div>
     
-    <div class="col-2">
+    <div class="col-md-4 justify-content-md-left">
+       <div class="row-4 my-4">
+         <%= link_to 'Edit', edit_student_path, 'data-disable-with': "Transferring now...", class: "btn" %> 
+         
+       </div>
+       <div class="row-4 my-4">
+           <%= link_to 'Remove', student_path, class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+         
+       </div>
+       <div class="row-4 my-4">
+           <%= link_to 'Back To Student Profiles', students_path, class: "btn" %> 
+         
+       </div>
 
-           <%= link_to 'Edit', edit_student_path, 'data-disable-with': "Transferring now..." %> 
-                      <br>
-
-           <%= link_to 'Remove', student_path, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-                   <br> 
-
-
-
-           <%= link_to 'Back To Student Profiles', students_path %> 
+                 
 
       
     </div>
+
+    <div class="row-12 empty_space">
+         
+               </div>
 
 </div>
 

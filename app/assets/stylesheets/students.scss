@@ -2,66 +2,75 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.student_short_bio {
-    height: 12rem;
-    color: white;
+
+
+.bio_glow{
+    background-color:coral;
 }
 
 .headshot_big img{
-    height: 14rem;
-    border-radius: 10px;
+    height: 18rem;
+    width: 18rem;
+    border-radius: 50%;
+    border: 1px solid crimson;
 }
 
-
-.headshot_small{
-overflow:hidden;
- 
+.sp_foreground{
+    background-color: coral;
 }
 
-.headshot_small img{
+.headshot_small {
+ width:200px;
+ height:200px;
+ border-radius:50%;
+ max-width:200px;
+ min-width:200px;
 
- width:100%;
+ }
 
- 
+.tile{
+    font-color:white;
+    font-size: 3em;
+}
+.tile a:hover{
+    color:white;  
 }
 
-.thumb_nail{
-   
+.tile a:visited{
+    color:white; 
 }
 
-.student_short_bio a{
-    color:black;    
-    padding: 1.5px;
-    border-top-right-radius: 10px;
-
-}
-
-.student_short_bio a:hover{
-    color:#efc23e;  
-}
-
- .student_short_bio_one {
+ .student_one {
     background:rgb(84, 57, 199);
+    font-size: 1.3em;
  }
 
-  .student_short_bio_two {
+  .student_two {
     background: rgb(200, 73, 188);
+    font-size: 1.3em;
  }
 
- .student_short_bio_three {
+ .student_three {
     background: rgb(87, 182, 88);
+    font-size: 1.3em;
  }
 
-.student_short_bio_four {
+.student_four {
     background: rgb(244, 104, 66);
+    font-size: 1.3em;
  }
 
-// ________________________ Media Q's _____________________________
-@media only screen and (max-width: 660px) {
-    .student_email {
-        display:none;
-    }
-    .delete_button {
-        display:none;
-    }
+
+ @media only screen and (max-width: 600px) {
+    .headshot_small {
+     width:105px;
+     height:105px;
+     border-radius:50%;
+     max-width:105px;
+     min-width:105px;
+     }
+     .tile{
+     font-size:2em;
+     }
 }
+
