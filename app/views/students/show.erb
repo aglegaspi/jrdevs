@@ -32,6 +32,21 @@
 
                   Portfolio: <%= @student.portfolio %> 
                       </div>
+
+
+                     <% @student.events.each do |event| %>
+                           <div class="row-12">
+                              <ul class=" table_format">
+                                <li class="title"><%= event.title %>
+
+                                  
+                                </li> 
+
+                              </ul>
+                               <%= link_to 'Remove', events_student_student_path, class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+                            </div>
+
+                      <% end %>
                 
                  
 

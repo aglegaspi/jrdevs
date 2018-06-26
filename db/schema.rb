@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_22_200646) do
+ActiveRecord::Schema.define(version: 2018_06_26_135205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,12 +73,12 @@ ActiveRecord::Schema.define(version: 2018_06_22_200646) do
   end
 
   create_table "events_students", force: :cascade do |t|
-    t.bigint "students_id"
-    t.bigint "events_id"
+    t.bigint "student_id"
+    t.bigint "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["events_id"], name: "index_events_students_on_events_id"
-    t.index ["students_id"], name: "index_events_students_on_students_id"
+    t.index ["event_id"], name: "index_events_students_on_event_id"
+    t.index ["student_id"], name: "index_events_students_on_student_id"
   end
 
   create_table "guests", force: :cascade do |t|
@@ -104,6 +104,6 @@ ActiveRecord::Schema.define(version: 2018_06_22_200646) do
 
   add_foreign_key "event_guests", "events"
   add_foreign_key "event_guests", "guests"
-  add_foreign_key "events_students", "events", column: "events_id"
-  add_foreign_key "events_students", "students", column: "students_id"
+  add_foreign_key "events_students", "events"
+  add_foreign_key "events_students", "students"
 end
