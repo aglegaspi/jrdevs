@@ -17,7 +17,6 @@ class EventsStudentsController < ApplicationController
             render :new
         end
         redirect_to students_path
-
      
     end
 
