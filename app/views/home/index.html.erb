@@ -4,11 +4,12 @@
       
     </div>
 
-    <div class="col-8 current_event bg-img">
-      <div class="date_size"> <%= @first_event.date.strftime("%B %-d, %Y") %></div>
-      <div class="time_large centered"> <%= @first_event.start_time.strftime("%-I:%M%p") %></div>
+    <div class="col-8 current_event">
+      <div class="time_size"><%= @first_event.start_time.strftime("%-I:%M%p") %></div>
+      <div class="date_size centered"> <%= @first_event.date.strftime("%B %-d, %Y") %></div>
       <div class="title_size centered"> <%= @first_event.title %></div>
-      <%= link_to "Register For Event", new_event_guest_path(@first_event.id), class: "btn float-right" %>
+      <br>
+      <%= link_to "Register", new_event_guest_path(@first_event.id), class: "btn float-right" %>
     </div>
 
     <div class="col-2">

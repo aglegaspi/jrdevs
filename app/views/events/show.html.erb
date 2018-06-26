@@ -13,7 +13,7 @@
       <li class="title"><%= @event.title %></li>
       <li class="time"><%= @event.start_time.strftime("%-I:%M%p") %> to <%= @event.end_time.strftime("%-I:%M%p") %></li>
       <li class="view"><%= @event.description %></li>
-      <li class="view"><%= link_to "Register For Event", new_event_guest_path(@event.id), class: "btn float-right" %></li>
+      <li class="view"><%= link_to "Register", new_event_guest_path(@event.id), class: "btn float-right" %></li>
       </ul>
 
       <%= link_to 'Return to Events', events_path %>

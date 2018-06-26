@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 
     def index
         @events = Event.all
-        @guests = Guest.all;
+        @guests = Guest.all
 
     end
 

@@ -8,21 +8,21 @@
 // }
 
 .current_event {
+    display:none;
     background-color: #ff0461de;
     padding: 20px;
     color: white;
 }
 
-.time_large {
-    font-size: 10vw;
-    line-height: 11vh;
+.date_size {
+    font-size: 5vw;
 }
 
 .centered {
     text-align: center;
 }
 
-.date_size {
+.time_size {
     font-size: 4vw;
 }
 
