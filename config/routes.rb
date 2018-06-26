@@ -19,10 +19,11 @@ Rails.application.routes.draw do
 	end
 
 	resources :events_students do 
-		 resources :students, only: [:index, :destroy]
+		 resources :students, only: [:index, :destroy, :edit]
 	end
 
 	resources :about, only: [:index]
+	resources :events_students, only: [:destroy]
 
 end
 

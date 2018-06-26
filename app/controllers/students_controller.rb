@@ -11,16 +11,20 @@ class StudentsController < ApplicationController
   	end
 
 	def new
+		@events = EventsStudent.all
 		@student = Student.new
 	end
 
 	def edit
 		@student = Student.find(params[:id])
+		@events = Event.all
 	end
 
 	def show
+		# This is Step One, of a long, and dark road.
 		@student = Student.find(params[:id])
-			 
+		@events = Event.all
+		@events_student = EventsStudent.new
 	end
 
 	def update
@@ -40,9 +44,8 @@ class StudentsController < ApplicationController
 	private
 
 	def student_params
-		params.require(:student).permit(:first_name, :last_name, :linkedin, :email, :portfolio, :avatar)
+		params.require(:student).permit(:first_name, :last_name, :linkedin, :email, :portfolio, :avatar, :event_id)
 		
 	end
-
 
 end

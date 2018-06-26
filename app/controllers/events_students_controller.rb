@@ -6,22 +6,20 @@ class EventsStudentsController < ApplicationController
     end
 
     def create
-        @eventstudent = EventsStudent.create
+        # {event_id: '67'} + {student_id: 33} = {event_id: '67', student_id: 33}
+        # you get the event_id from the form, student_id from the params
+        @eventstudent = EventsStudent.create(events_student_params.merge(student_id: params[:student_id])) # {event_id: '567', student_id: 66}
         if @eventstudent.valid?
             flash[:success] = 'You Are Registered!'
-            redirect_to students_path
-        end
-
-        if @event.invalid?
+        else
             flash[:error] = 'Uh you missed something.'
-            render :new
         end
-        redirect_to students_path
+        redirect_to student_path(params[:student_id])
      
     end
 
     def edit
-        @eventstudent = EventsStudent.find(params[:id])
+        @eventstudent = EventsStudent.new
     end
 
     def update
@@ -33,15 +31,16 @@ class EventsStudentsController < ApplicationController
     end
 
     def destroy
-        Event.destroy(params[:id])
-        # we are responding with to the delete with jason
-        # render json: {status: 'success', message: 'Event was removed!'}
+        events_student = EventsStudent.find(params[:id])
+        events_student.destroy
+
+        redirect_to student_path(events_student.student_id)
     end
 
-    def event_params
+    def events_student_params
         #will return somethine that looks like this:
-        #{name: '...', :description: '...'}
-        params.require(:event).permit(:title,:date,:start_time,:end_time,:description)
+        
+        params.require(:events_student).permit(:event_id) #{event_id: '567'}
     end
 
 end

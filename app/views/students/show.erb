@@ -32,55 +32,35 @@
 
                   Portfolio: <%= @student.portfolio %> 
                       </div>
-
-
-                     <% @student.events.each do |event| %>
-                           <div class="row-12">
-                              <ul class=" table_format">
-                                <li class="title"><%= event.title %>
-
-                                  
-                                </li> 
-
-                              </ul>
-                               <%= link_to 'Remove', events_student_student_path, class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %>
-                            </div>
-
-                      <% end %>
-                
-                 
-
-                  
-
-            
+                   <!--   This format is due to the route, to access the individual students events, you have to go through events_students -->
+                      <% @student.events_students.each do |events_student| %>
+                            <div class="row-12">
+                               <ul class=" table_format">
+                                 <li class="title"><%= events_student.event.title %></li> 
+                               </ul>
+                                <%= link_to 'Remove', events_student_path(events_student), class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+                             </div>
+                       <% end %>                                  
           </div>
-        </div>
-
-          
-
-
-
-
-      
+        </div>      
     </div>
     
     <div class="col-md-4 justify-content-md-left">
-       <div class="row-4 my-4">
+       <div class="row-3 my-4">
          <%= link_to 'Edit', edit_student_path, 'data-disable-with': "Transferring now...", class: "btn" %> 
          
        </div>
-       <div class="row-4 my-4">
+       <div class="row-3 my-4">
            <%= link_to 'Remove', student_path, class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %>
          
        </div>
-       <div class="row-4 my-4">
+       <div class="row-3 my-4">
            <%= link_to 'Back To Student Profiles', students_path, class: "btn" %> 
          
-       </div>
-
-                 
-
-      
+       </div> 
+       <div class="row-3 my-4">
+             <%= render 'students_events_form' %>     
+       </div>     
     </div>
 
     <div class="row-12 empty_space">

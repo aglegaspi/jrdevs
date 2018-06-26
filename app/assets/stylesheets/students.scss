@@ -3,7 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.student_count{
+    background-color:coral;
+    padding: .5rem;
+    margin:  .5rem;
+    border-radius: 4%;
+}
 
+.total{
+    font-size: 2em;
+}
 .bio_glow{
     background-color:coral;
 }
@@ -30,7 +39,7 @@
 
 .tile{
     font-color:white;
-    font-size: 3em;
+    
 }
 .tile a:hover{
     color:white;  

@@ -1,0 +1,9 @@
+<%= form_for [@student, @events_student] do |f| %>
+<!--   In the above, the @student is to point to that particular student, @events_students is referencing the events_students_controller -->
+
+	<%= f.label :event_id, 'Select Event' %>
+	 <br>
+	<%= f.select :event_id, options_for_select(@events.map {|event| [event.title, event.id]}) %>
+
+	<%= f.submit %>
+<% end %>

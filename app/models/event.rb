@@ -7,5 +7,4 @@ class Event < ApplicationRecord
   has_many :students, through: :events_students
   
 
-
 end
