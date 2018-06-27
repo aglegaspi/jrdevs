@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .student_count{
     background-color:coral;
     padding: .5rem;
@@ -12,9 +11,18 @@
 
 .total{
     font-size: 2em;
+    color:#0a8cff;
 }
 .bio_glow{
     background-color:coral;
+    height: 11rem;
+    color:white;
+    font-size: 1.4em;
+}
+
+.bio_text{
+    color:black;
+    font-weight: 900;
 }
 
 .headshot_big img{
@@ -29,18 +37,17 @@
 }
 
 .headshot_small {
- width:200px;
- height:200px;
- border-radius:50%;
- max-width:200px;
- min-width:200px;
-
+     width:200px;
+     height:200px;
+     border-radius:50%;
+     max-width:200px;
+     min-width:200px;
  }
 
 .tile{
-    font-color:white;
-    
+    font-color:white;   
 }
+
 .tile a:hover{
     color:white;  
 }
@@ -69,6 +76,26 @@
     font-size: 1.3em;
  }
 
+option{
+    font-size: 2em;
+}
+select{
+    width:17rem;
+}
+
+input{
+    margin: 1rem;
+}
+label{
+    width:17rem;
+    font-weight:900;
+    font-size:1.2em;
+}
+
+value{
+    font-size: 2em;
+}
+
 
  @media only screen and (max-width: 600px) {
     .headshot_small {
@@ -81,5 +108,17 @@
      .tile{
      font-size:2em;
      }
+     .bio_glow{
+    height: 11rem;
+    color:black;
+    font-size: 1em;
+    }
+
+     .bio_text{
+     color:white;
+     font-weight: 700;
+     
+    }
+
 }
 

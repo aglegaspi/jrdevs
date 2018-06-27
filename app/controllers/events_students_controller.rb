@@ -1,4 +1,3 @@
-
 class EventsStudentsController < ApplicationController
 
     def new
@@ -38,8 +37,7 @@ class EventsStudentsController < ApplicationController
     end
 
     def events_student_params
-        #will return somethine that looks like this:
-        
+        #will return somethine that looks like this:   
         params.require(:events_student).permit(:event_id) #{event_id: '567'}
     end
 
