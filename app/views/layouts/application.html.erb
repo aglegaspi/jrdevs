@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <title>jrdevs.</title>
 </head>
 <body class="<%= controller_name %> <%= action_name %>">
@@ -38,7 +39,7 @@
           <li class="nav-item">
             <%= link_to ' Student Profiles', students_path, class: 'nav-link' %>
           </li>
-          
+
           <li class="nav-item">
             <%= link_to 'About', about_index_path, class: 'nav-link' %>
           </li>
@@ -48,7 +49,7 @@
               <li class="nav-item">
               <%= link_to ' Guests', guests_path, class: 'nav-link' %>
               </li>
-            
+
             <li class="nav-item">
               <%= link_to 'Log Out', destroy_admin_session_path, method: 'DELETE', class: 'nav-link float-right' %>
             </li>
