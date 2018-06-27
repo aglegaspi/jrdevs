@@ -6,14 +6,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	root :to => 'home#index'
 
-	resources :event_guests, only: [:index,:destroy]
-
 	resources :events do
 		resources :guests, only: [:new,:create]
 	end
 
-	resources :guests
-	
+	resources :guests, except: [:new, :create]
+
 	resources :students do
 		resources :events_students, only: [:new, :show, :create]
 	end
@@ -23,7 +21,7 @@ Rails.application.routes.draw do
 	end
 
 	resources :about, only: [:index]
-	resources :events_students, only: [:destroy]
+	resources :events_students, only: [:index, :destroy]
+
 
 end
-

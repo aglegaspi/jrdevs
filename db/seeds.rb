@@ -90,14 +90,30 @@ events = [{
 	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
 },	{
-	title: 'Web Development Fellowship Showcase', 
+	title: 'Web Development Fellowship Showcase',
 	date:  '2018-09-26',
 	start_time: '16:00:00',
 	end_time: '18:00:00',
 	description: 'Alumni present their Frontend and Backend skills.
 	Showcasing their skills in HTML, CSS, JavaScript, jQuery, AJAX, API, Ruby/Ruby on Rails, PostgreSQL,
 	UX/UI frameworks such as Bootstrap, SASS, and individually learned languages.',
-}]
+},
+{
+	title: 'Badruduja Press',
+	date:  '2018-09-27',
+	start_time: '16:00:00',
+	end_time: '18:00:00',
+	description: 'HTML, CSS',
+},
+{
+	title: 'BDB Press',
+	date:  '2018-09-27',
+	start_time: '16:00:00',
+	end_time: '18:00:00',
+	description: 'HTML, CSS',
+}
+
+]
 
 events.each do |s|
 	Event.create(s) unless Event.exists?(date: s[:date])

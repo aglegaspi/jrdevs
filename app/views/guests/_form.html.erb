@@ -1,6 +1,6 @@
 
 <center>
-	<%= form_for @guest do |f| %>
+	<%= form_for [@event, @guest] do |f| %>
 
 	<div class="form-group row">
 		<%= f.label :first_name, class:"col-sm-2 col-form-label col-form-label-sm"  %>
@@ -42,24 +42,10 @@
 			 <%= f.text_field :linkedin, class:"form-control form-control-sm" %>
 	 </div>
 	</div>
-  <!-- @events -->
-	<!-- <div class="field form-group">
-						 <%= label_tag :event_id, 'Select Instructor:' %><br>
-						 <%= select_tag :event_id, options_for_select(@events.collect {|c| [ c.title, c.id ] }, {include_blank: 'Select Event'})%>
-	</div> -->
-
-
-
 
  <div class="col-auto">
 	 		<%= f.submit %>
  </div>
-
-
-
-
-
-
 <% end %>
 <!--
 
