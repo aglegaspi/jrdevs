@@ -1,0 +1,18 @@
+<%= form_for   @eventstudent do |f| %>
+		  <div>
+		 	 <%= f.label :event_id %>
+		 	 <%= f.select(:event_id, @eventstudent.map {|s|["#{s.title},#{s.date}", s.id]})%>
+		  </div>
+
+		  <div>
+		 	 <%= f.label :student_id %>
+		 	 <%= f.select(:student_id, @eventstudent.map {|c|}) %>
+		  </div>
+
+		  <
+
+		  <div>
+		  	 <%= f.submit %>
+		  </div>
+
+<% end %>

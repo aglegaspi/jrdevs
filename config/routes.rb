@@ -16,11 +16,12 @@ Rails.application.routes.draw do
 		resources :events_students, only: [:new, :show, :create]
 	end
 
-	resources :events_students do
-		 resources :students, only: [:index, :destroy]
+	resources :events_students do 
+		 resources :students, only: [:index, :destroy, :edit]
 	end
 
 	resources :about, only: [:index]
-	resources :event_guests, only: [:index,:destroy]
+	resources :events_students, only: [:index, :destroy]
+
 
 end
