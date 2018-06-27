@@ -10,14 +10,14 @@
                <u> <%= @student.first_name %>  <%= @student.last_name %> </u>
               </b>
             </h3>
-                     <br>
+                        <br>
 
           <% if @student.avatar.attached? %>
                         <div class="row-6 my-3 headshot_big">
                           <%= image_tag @student.avatar %>
                         </div>
               <% else %>
-                       <div class="row-6 my-3  headshot_big">
+                        <div class="row-6 my-3  headshot_big">
                           <%= image_tag "hamilton.jpg" %>
                           <p>  * No Head Shot Given * </p>
                         </div>
@@ -88,7 +88,9 @@
          
        </div> 
        <div class="row-3 my-4">
-             <%= render 'students_events_form', class: "event_select" %>     
+        <% if current_admin %>
+             <%= render 'students_events_form', class: "event_select" %>
+        <% end %>      
        </div>     
     </div>
 
