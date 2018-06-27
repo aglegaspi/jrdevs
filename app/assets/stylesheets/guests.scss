@@ -1,3 +1,41 @@
 // Place all the styles related to the Guests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.text-color{
+
+  color:blue;
+  font-size: 22px;
+}
+
+.guest_one {
+   background:rgb(84, 57, 199);
+  color: white;
+   // font-size: 1.3em;
+}
+
+ .guest_two {
+   background: rgb(200, 73, 188);
+   color: white;
+   // font-size: 1.3em;
+}
+
+.guest_three {
+   background: rgb(87, 182, 88);
+   color: white;
+   // font-size: 1.3em;
+}
+
+.guest_four {
+   background: rgb(244, 104, 66);
+   // font-size: 1.3em;
+}
+.font_properties{
+  font-family: 'Shadows Into Light', cursive;
+
+   font-size: 40px;
+}
+
+.padding{
+  width: 200px;
+}
