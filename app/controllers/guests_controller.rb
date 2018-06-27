@@ -94,7 +94,7 @@ class GuestsController < ApplicationController
         redirect_to guests_path
 
      else
-        flash[:error] = 'Registion before information'
+        flash[:error] = 'Registion Error: cannot be registrar two event at the same time.'
         redirect_to guests_path
         # render :new
      end

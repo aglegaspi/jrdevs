@@ -11,15 +11,15 @@ class EventsController < ApplicationController
 
         if @event.valid?
             flash[:success] = 'Yas...The event has been added!'
-            redirect_to students_path
+            redirect_to events_path
         end
 
 
         if @event.invalid?
             flash[:error] = 'Uh you missed something.'
-            render :new
+            # render :new
         end
-        redirect_to events_path
+        # redirect_to events_path
     end
 
     def new

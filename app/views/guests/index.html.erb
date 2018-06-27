@@ -1,5 +1,4 @@
 <!-- <H1> Walking through Guest Page </H1> -->
-<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 <div class="row justify-content-md-center"">
 	 <div class="col-3">
 		 <h1 class="page_title"> guest</h1>
@@ -9,9 +8,9 @@
 
           <% @guests.each_with_index do |guest, counter| %>
 
-
+          			 <div id= counter class="parent-tr font_properties">
            <%  if counter % 3 == 0 %>
-  						 <div id= counter class="parent-tr font_properties">
+
 				  					 <ul class=" table_format guest_three">
 
 					  				  <% guest.events.each do |my_event| %>
@@ -30,10 +29,12 @@
 										   <% end %>
 										  </li>
 									  </ul>
-						      </div>
+
 							<% end %>
+							     </div>
+							<div id= counter class="parent-tr font_properties">
             <%  if counter % 3 == 1 %>
-						<div id= counter class="parent-tr font_properties">
+
 									<ul class=" table_format guest_one">
 
 									 <% guest.events.each do |my_event| %>
@@ -52,8 +53,9 @@
 										<% end %>
 									 </li>
 								 </ul>
-							 </div>
+
 					   <% end %>
+						 </div>
 						 <%  if counter % 3 == 2 %>
 						 <div id= counter class="parent-tr font_properties">
 									 <ul class=" table_format guest_two">
