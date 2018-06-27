@@ -6,9 +6,15 @@
 console.log(' Document Loading');
 $(document).ready(function() {
 
-  $(1).fadeIn();
-  $(2).fadeIn("slow");
-  $(3).fadeIn(3000);
+  $(document).ready(function() {
+    $('.guest_three').css('display', 'none');
+    $('.guest_three').slideToggle(1000, "swing");
+    $('.guest_one').css('display', 'none');
+    $('.guest_one').slideToggle(1000, "swing");
+    $('.guest_two').css('display', 'none');
+    $('.guest_two').slideToggle(1000, "swing");
+
+  });
 
   if (document.querySelector('body.guests.index') == undefined) {
     console.log('body.guests.index');
@@ -18,7 +24,7 @@ $(document).ready(function() {
   $('.delete-todo').on('ajax:success', function(e) {
     $(e.target).parents('.parent-tr').remove();
     console.log(' Parent DIV removed');
-    toastr.success('Your todo has been successfully deleted');
+    toastr.success('Guest event has been deleted, successfully');
 
   });
 });
