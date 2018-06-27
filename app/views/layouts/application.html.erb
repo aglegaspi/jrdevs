@@ -43,12 +43,14 @@
           <li class="nav-item">
             <%= link_to 'About', about_index_path, class: 'nav-link' %>
           </li>
+          
+          <li class="nav-item">
+          <%= link_to ' Guests', guests_path, class: 'nav-link' %>
+          </li>
 
           <% if current_admin %>
             <!-- if admin logged in they will only see log out -->
-              <li class="nav-item">
-              <%= link_to ' Guests', guests_path, class: 'nav-link' %>
-              </li>
+
 
             <li class="nav-item">
               <%= link_to 'Log Out', destroy_admin_session_path, method: 'DELETE', class: 'nav-link float-right' %>
