@@ -11,7 +11,7 @@
 
 
            <%  if counter % 3 == 0 %>
-  						 <div class="parent-tr font_properties">
+  						 <div id= counter class="parent-tr font_properties">
 				  					 <ul class=" table_format guest_three">
 
 					  				  <% guest.events.each do |my_event| %>
@@ -33,49 +33,48 @@
 						      </div>
 							<% end %>
             <%  if counter % 3 == 1 %>
-								 <div class="parent-tr">
-										<ul class="table_format guest_one">
+						<div id= counter class="parent-tr font_properties">
+									<ul class=" table_format guest_one">
 
-										  <% guest.events.each do |my_event| %>
-													 <li class="title "> Event Name(s): <%= my_event.title %> </li>
-										  <% end %>
-												<li class="font_properties "> First Name: <%= guest.first_name %></li>
-												<li class="font_properties "> Last Name: <%= guest.last_name %> </li>
-												<li class="font_properties "> Company: <%= guest.company %> </li>
-												<li class="font_properties "> Comapany Website: <%= guest.company_website %> </li>
-												<li class="font_properties"> Email: <%= guest.email %> </li>
-												<li class="font_properties "> Linkedin: <%= guest.linkedin %> </li>
+									 <% guest.events.each do |my_event| %>
+												 <li class="font_properties" > Event Name(s): <%= my_event.title %> </li>
+									 <% end %>
+											<li class="font_properties "> First Name: <%= guest.first_name %></li>
+											<li class="font_properties "> Last Name: <%= guest.last_name %> </li>
+											<li class="font_properties"> Company: <%= guest.company %> </li>
+											<li class="font_properties "> Comapany Website: <%= guest.company_website %> </li>
+											<li class="font_properties "> Email: <%= guest.email %> </li>
+											<li class="font_properties "> Linkedin: <%= guest.linkedin %> </li>
 											<li class="view">
 											<% if admin_signed_in? %>
 											<%= link_to 'Delete', guest, method: :delete, remote: true, class:'font_properties delete-todo btn float-right' %>
-                       <br>
-											<% end %>
-										 </li>
-         				 </ul>
-           			</div>
+										 <br>
+										<% end %>
+									 </li>
+								 </ul>
+							 </div>
 					   <% end %>
 						 <%  if counter % 3 == 2 %>
-								 <div class="parent-tr">
-										<ul class="table_format guest_two">
+						 <div id= counter class="parent-tr font_properties">
+									 <ul class=" table_format guest_two">
 
-										 <% guest.events.each do |my_event| %>
-													 <li class="title "> Event Name(s): <%= my_event.title %> </li>
+										<% guest.events.each do |my_event| %>
+													<li class="font_properties" > Event Name(s): <%= my_event.title %> </li>
+										<% end %>
+											 <li class="font_properties "> First Name: <%= guest.first_name %></li>
+											 <li class="font_properties "> Last Name: <%= guest.last_name %> </li>
+											 <li class="font_properties"> Company: <%= guest.company %> </li>
+											 <li class="font_properties "> Comapany Website: <%= guest.company_website %> </li>
+											 <li class="font_properties "> Email: <%= guest.email %> </li>
+											 <li class="font_properties "> Linkedin: <%= guest.linkedin %> </li>
+											 <li class="view">
+											 <% if admin_signed_in? %>
+											 <%= link_to 'Delete', guest, method: :delete, remote: true, class:'font_properties delete-todo btn float-right' %>
+											<br>
 										 <% end %>
-												<li class="font_properties "> First Name: <%= guest.first_name %></li>
-												<li class="font_properties "> Last Name: <%= guest.last_name %> </li>
-												<li class="font_properties "> Company: <%= guest.company %> </li>
-												<li class="font_properties "> Comapany Website: <%= guest.company_website %> </li>
-												<li class="font_properties"> Email: <%= guest.email %> </li>
-												<li class="font_properties "> Linkedin: <%= guest.linkedin %> </li>
-											<li class="view">
-											<% if admin_signed_in? %>
-												<%= link_to 'Delete', guest, method: :delete, remote: true, class:'font_properties delete-todo btn float-right' %>
-													<br>
-
-											<% end %>
-										 </li>
-									 </ul>
-									</div>
+										</li>
+									</ul>
+								</div>
 						 <% end %>
 						 <div class="row-12 empty_space">
 
